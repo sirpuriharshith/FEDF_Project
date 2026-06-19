@@ -33,81 +33,137 @@ This project is developed for the **Front-End Engineering course** and is design
 
 # 📂 Project Structure
 
+# 📂 MediAssist Project Structure (React + JavaScript + Vite)
+
 ```text
 mediassist/
-
-public/
-
-src/
-
-assets/
-
-components/
-
-Navbar/
-
-Sidebar/
-
-Footer/
-
-Cards/
-
-Charts/
-
-AIAssistant/
-
-pages/
-
-Dashboard/
-
-Records/
-
-Analysis/
-
-Doctors/
-
-Hospitals/
-
-Booking/
-
-Costs/
-
-Recovery/
-
-Awareness/
-
-Emergency/
-
-Login/
-
-Register/
-
-Profile/
-
-services/
-
-firebase.js
-
-data.js
-
-api.js
-
-context/
-
-AuthContext.jsx
-
-App.jsx
-
-main.jsx
-
-index.css
-
-package.json
-
-vite.config.js
-
-README.md
+│
+├── public/
+│
+├── src/
+│   │
+│   ├── assets/
+│   │     ├── images/
+│   │     ├── icons/
+│   │     └── logos/
+│   │
+│   ├── components/
+│   │     ├── Navbar/
+│   │     │      └── Navbar.jsx
+│   │     │
+│   │     ├── Sidebar/
+│   │     │      └── Sidebar.jsx
+│   │     │
+│   │     ├── Footer/
+│   │     │      └── Footer.jsx
+│   │     │
+│   │     ├── Cards/
+│   │     │      └── HealthCard.jsx
+│   │     │
+│   │     ├── Charts/
+│   │     │      └── RecoveryChart.jsx
+│   │     │
+│   │     ├── AIAssistant/
+│   │     │      └── ChatBot.jsx
+│   │     │
+│   │     └── ProtectedRoute/
+│   │            └── ProtectedRoute.jsx
+│   │
+│   ├── context/
+│   │      └── AuthContext.jsx
+│   │
+│   ├── services/
+│   │      ├── api.js
+│   │      ├── firebase.js
+│   │      └── data.js
+│   │
+│   ├── pages/
+│   │
+│   │    ├── Dashboard/
+│   │    │      └── Dashboard.jsx
+│   │    │
+│   │    ├── Records/
+│   │    │      └── Records.jsx
+│   │    │
+│   │    ├── Analysis/
+│   │    │      └── Analysis.jsx
+│   │    │
+│   │    ├── Doctors/
+│   │    │      └── Doctors.jsx
+│   │    │
+│   │    ├── Hospitals/
+│   │    │      └── Hospitals.jsx
+│   │    │
+│   │    ├── Booking/
+│   │    │      └── Booking.jsx
+│   │    │
+│   │    ├── Costs/
+│   │    │      └── Costs.jsx
+│   │    │
+│   │    ├── Recovery/
+│   │    │      └── Recovery.jsx
+│   │    │
+│   │    ├── Awareness/
+│   │    │      └── Awareness.jsx
+│   │    │
+│   │    ├── Emergency/
+│   │    │      └── Emergency.jsx
+│   │    │
+│   │    ├── Login/
+│   │    │      └── Login.jsx
+│   │    │
+│   │    ├── Register/
+│   │    │      └── Register.jsx
+│   │    │
+│   │    └── Profile/
+│   │           └── Profile.jsx
+│   │
+│   ├── App.jsx
+│   ├── main.jsx
+│   └── index.css
+│
+├── package.json
+├── vite.config.js
+├── .env
+└── README.md
 ```
+
+# 🏗️ Architecture Flow
+
+```text
+User
+↓
+Google Login (Firebase)
+↓
+Auth Context
+↓
+Protected Routes
+↓
+Dashboard
+↓
+Health Modules
+↓
+Records
+↓
+Symptom Analysis
+↓
+Doctors
+↓
+Hospitals
+↓
+Appointments
+↓
+Cost Estimator
+↓
+Recovery Tracker
+↓
+Awareness Library
+↓
+Emergency Guide
+↓
+AI Assistant
+```
+
 
 ---
 
