@@ -1,0 +1,15 @@
+.profile-container {
+  padding: 20px;
+}
+
+.profile-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 400px;
+}
+
+.profile-container input,
+.profile-container textarea {
+  padding: 10px;
+}

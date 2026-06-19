@@ -1,0 +1,43 @@
+:root {
+  color-scheme: light;
+  font-family: Inter, Arial, sans-serif;
+  background: #eef2ff;
+  color: #111827;
+  --panel-bg: #ffffff;
+  --panel-shadow: 0 16px 40px rgba(15, 23, 42, 0.08);
+  --primary: #4f46e5;
+  --accent: #6366f1;
+  --surface: #f8fafc;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  background: #eef2ff;
+  color: #111827;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
