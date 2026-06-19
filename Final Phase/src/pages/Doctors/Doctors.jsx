@@ -1,0 +1,6 @@
+import { useMemo, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import PageShell from '../../components/PageShell';
+import { Pill } from '../../components/Card';
+import { doctors } from '../../services/data';
+export default function Doctors(){ const [spec,setSpec]=useState('All specialties'); const nav=useNavigate(); const specs=['All specialties',...new Set(doctors.map(d=>d.specialty))]; const list=useMemo(()=>spec==='All specialties'?doctors:doctors.filter(d=>d.specialty===spec),[spec]); return <PageShell title="Doctors for you" subtitle="Browse specialists by area of care." wide><div className="toolbar"><select value={spec} onChange={e=>setSpec(e.target.value)}>{specs.map(s=><option key={s}>{s}</option>)}</select></div><section className="grid three">{list.map(d=><article className="doctor-card" key={d.id}><img src={d.img} alt={d.name}/><div><h3>{d.name}</h3><p className="accent">{d.specialty}</p><p>⌖ {d.hospital}</p></div><span>⭐ {d.rating}</span><span>{d.exp} yrs exp.</span><b>₹{d.fee}</b><Pill tone={d.availability==='Available Today'?'mint':'blue'}>{d.availability}</Pill><button className="primary full-btn" onClick={()=>nav('/booking',{state:{doctor:d.name}})}>Book appointment</button></article>)}</section></PageShell> }

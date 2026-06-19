@@ -1,0 +1,5 @@
+import PageShell from '../../components/PageShell';
+import Card from '../../components/Card';
+import { useAuth } from '../../context/AuthContext';
+import { load } from '../../services/storage';
+export default function Profile(){ const {user,signOut}=useAuth(); const records=load('records',{}); return <PageShell title="Profile" subtitle="Your Google account and MediAssist health summary."><Card className="profile-card"><div className="profile-photo">{user?.photoURL?<img src={user.photoURL} alt="profile"/>:(user?.displayName||'M').charAt(0)}</div><div><h2>{user?.displayName}</h2><p>{user?.email}</p><button className="ghost" onClick={signOut}>Logout</button></div></Card><Card><h3>Health snapshot</h3><div className="profile-grid"><p><b>Blood type</b><br/>{records.blood||'Not added'}</p><p><b>Allergies</b><br/>{records.allergies||'Not added'}</p><p><b>Conditions</b><br/>{records.conditions||'Not added'}</p><p><b>Emergency Contact</b><br/>{records.contact||'Not added'} {records.phone||''}</p></div></Card></PageShell> }

@@ -1,0 +1,3 @@
+import { Link, useNavigate } from 'react-router-dom';
+import { useAuth } from '../../context/AuthContext';
+export default function Register(){ const {signIn,loading}=useAuth(); const nav=useNavigate(); async function go(){ await signIn(); nav('/profile'); } return <main className="auth-page"><section className="auth-card"><div className="brand-icon big-heart">♥</div><h1>Create your MediAssist account</h1><p>Register instantly using Google authentication.</p><button className="google" onClick={go} disabled={loading}>G&nbsp;&nbsp; {loading?'Creating...':'Register with Google'}</button><p>Already have an account? <Link to="/login">Sign in</Link></p></section></main> }
