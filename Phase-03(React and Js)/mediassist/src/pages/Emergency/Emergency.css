@@ -1,0 +1,18 @@
+.emergency-container {
+  padding: 20px;
+}
+
+.emergency-container textarea {
+  width: 400px;
+  height: 120px;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.emergency-container button {
+  padding: 10px 20px;
+}
+
+.result {
+  margin-top: 20px;
+}

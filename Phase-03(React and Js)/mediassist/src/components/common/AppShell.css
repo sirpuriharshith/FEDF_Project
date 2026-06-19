@@ -1,0 +1,32 @@
+.app-shell {
+  min-height: 100vh;
+  background: #eef2ff;
+}
+
+.app-layout {
+  display: flex;
+  gap: 20px;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.app-main {
+  flex: 1;
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 24px;
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.08);
+}
+
+@media (max-width: 900px) {
+  .app-layout {
+    flex-direction: column;
+    padding: 16px;
+  }
+
+  .app-sidebar {
+    width: 100%;
+    min-width: unset;
+  }
+}
